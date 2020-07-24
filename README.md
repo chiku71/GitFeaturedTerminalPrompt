@@ -16,8 +16,8 @@
    8) ![](__SymbolsForReadMe/Stashed.png) : Number of stash  
 
 ## Dependencies:  
-   i) fonts-powerline  
-      ==> sudo apt-get install fonts-powerline  
+   * fonts-powerline  
+     $ **sudo apt-get install fonts-powerline**
       
       
 
