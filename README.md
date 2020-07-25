@@ -1,4 +1,4 @@
-# TerminalPromptWithGitFeatures
+# TerminalPromptWithGitStatus
 
 ## Sample Screens:  
 ![Sample Bash Terminal Prompt](SampleBashTerminalPrompt2.png)
