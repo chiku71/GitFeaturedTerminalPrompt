@@ -11,7 +11,8 @@
    * ![](__SymbolsForReadMe/Push.png) : Number of commits ahead  
    * ![](__SymbolsForReadMe/Staged.png) : Number of files staged  
    * ![](__SymbolsForReadMe/Modified.png) : Number of files modified but unstaged  
-   * ![](__SymbolsForReadMe/UntrackedOrAdded.png) : Number of files untracked or newly added
+   * ![](__SymbolsForReadMe/UntrackedOrAdded.png) : Number of files untracked or newly added  
+   * ![](__SymbolsForReadMe/Deleted.png) : Number of files deleted
    * ![](__SymbolsForReadMe/Conflicts.png) : Number of conflicts  
    * ![](__SymbolsForReadMe/Stashed.png) : Number of stash  
 
