@@ -46,6 +46,7 @@ prompt_git_info() {
 		fi
 		
 		local NUM_MODIFIED=$(git diff --name-only --diff-filter=M | wc -l)
+		local NUM_DELETED=$(git diff --name-only --diff-filter=D | wc -l)
 		local NUM_UNTRACKED=$(git status --porcelain 2>/dev/null| grep "^??" | wc -l)
     		local NUM_STAGED=$(git diff --staged --name-only --diff-filter=AM | wc -l)
     		local NUM_CONFLICT=$(git diff --name-only --diff-filter=U | wc -l)
@@ -79,6 +80,11 @@ prompt_git_info() {
 		# Add Numbder of Newly Added Files
 		if [ $NUM_UNTRACKED != "0" ] || $TEST_SYMBOLS; then
 			GIT_BRANCH_IN_DIR="${GIT_BRANCH_IN_DIR}＋$NUM_UNTRACKED " 
+		fi
+		
+		# Add Numbder of Deleted Files
+		if [ $NUM_DELETED != "0" ] || $TEST_SYMBOLS; then
+			GIT_BRANCH_IN_DIR="${GIT_BRANCH_IN_DIR}$NUM_DELETED " 
 		fi
 		
 		# Add Number of Conflicts
@@ -176,7 +182,7 @@ bash_prompt() {
 	############################################################################
         # Do a git fetch
         if [ $(git branch 2>/dev/null | grep '^*' | colrm 1 2) ];then
-		$(git fetch)
+		$(git fetch &> /dev/null)
 	fi
 	
 	# Required Font Effect
